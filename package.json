@@ -4,10 +4,16 @@
   "description": "November CodeDay 2019",
   "main": "index.js",
   "dependencies": {
-    "vue.js": "^0.3.2"
+    "koa": "^2.11.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "koa.js": "^1.0.0",
+    "vue.js": "^0.3.2",
+    "yarn": "^1.19.1"
   },
   "devDependencies": {},
   "scripts": {
+    "start": "node src/web-server.js",
     "test": "mocha"
   },
   "repository": {

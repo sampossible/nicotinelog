@@ -4,13 +4,17 @@
     <title>Nicotine Log</title>
     <meta charset="utf-8" />
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-     <script src="https://cdn.jsdelivr.net/npm/vue-router@3.1.2/dist/vue-router.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-router@3.1.2/dist/vue-router.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
   </head>
   <body>
     <div id="app">
         <p>I want to cut down my nicotine consumption by <input :placeholder='percentRed'>% in the next
             <select>
+                <section>
+                    <option selected v-if="time == -1"></option>
+                    <option v-else></option>
+                </section>
                 <section>
                     <option selected v-if="time == 0">1 week</option>
                     <option v-else>1 week</option>
@@ -40,6 +44,10 @@
         <p>Right now I most often use a
             <select>
                 <section>
+                    <option selected v-if="device == -1"></option>
+                    <option v-else></option>
+                </section>
+                <section>
                     <option selected v-if="device == 0">Juul</option>
                     <option v-else>Juul</option>
                 </section>
@@ -50,7 +58,7 @@
             </select>
         </p>
         <p>Right now I think I use nicotine <input :placeholder='tad'> times a day and <input :placeholder='taw'> days a week</p>
-        <p>An inspirational message to myself: <input :placeholder='inspire'></p>
+        <p>An inspirational message to myself: <input :placeholder='inspi3re'></p>
     </div>
     <script>
         const app = new Vue({
